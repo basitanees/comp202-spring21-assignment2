@@ -12,8 +12,11 @@ class HW2
 	//Function To Display The Linked list
 	static void printList( Node ptr)
 	{
-		if (ptr == null)
+		if (ptr == null) 
+		{
 			System.out.println();
+			return;
+		}
 		else if (ptr.next != null)
 		{
 			while (ptr.next != null)
