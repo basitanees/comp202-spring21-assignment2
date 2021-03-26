@@ -1,37 +1,9 @@
 import java.util.Scanner;
 		
 public class HW2_Test {
-	
-  static Node createNode(double coeff, int power)
-	{
-		Node newNode = new Node();
-		newNode.coeff = coeff;
-		newNode.power = power;
-		newNode.next = null;
-		return newNode;
-	}
-	
-	// Function add a new node at the end of list
-	static Node addnode(Node start, double coeff, int power)
-	{
-	    // Create a new node
-	    Node newnode = createNode(coeff, power);
-	 
-	    // If linked list is empty
-	    if (start == null)
-	        return newnode;
-	 
-	    // If linked list has nodes, add at the end
-	    Node ptr = start;
-	    while (ptr.next != null)
-	        ptr = ptr.next;
-	    ptr.next = newnode;
-	 
-	    return start;
-	}
-  
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+	  
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
 
     Node poly1 = null;
     Node poly2 = null;
