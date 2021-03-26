@@ -4,11 +4,11 @@ public class HW2_Test {
 	
   static Node createNode(double coeff, int power)
 	{
-      Node newNode = new Node();
-      newNode.coeff = coeff;
-      newNode.power = power;
-      newNode.next = null;
-	    return newNode;
+		Node newNode = new Node();
+		newNode.coeff = coeff;
+		newNode.power = power;
+		newNode.next = null;
+		return newNode;
 	}
 	
 	// Function add a new node at the end of list
@@ -66,7 +66,7 @@ public class HW2_Test {
     scan.next(); // gets rid of the "end" token in the end of each list in the test cases
 
     HW2.printList(HW2.multiply(poly1, poly2));
-    HW2.printList(HW2.addPoly(poly1, poly2));
+    HW2.printList(HW2.add(poly1, poly2));
 		
 		
 		scan.close();
