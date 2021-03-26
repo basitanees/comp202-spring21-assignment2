@@ -5,42 +5,46 @@ public class HW2_Test {
 public static void main(String[] args) {
 	Scanner scan = new Scanner(System.in);
 
-    Node poly1 = null;
-    Node poly2 = null;
-    Node current = null;
+	Node poly1 = null;
+	Node poly2 = null;
+	Node current = null;
 
-    // reads integer tokens from the console and constructs a LinkedList from them
-    while (scan.hasNextInt()) {
-      double coeff = scan.nextInt();
-      int power = scan.nextInt();
-      if (poly1 == null) {
-         poly1 = createNode(coeff, power);
-         current = poly1;
-      } else {
-        current.next = createNode(coeff, power);;
-        current = current.next;
-      }
-    }
-    scan.next(); // gets rid of the "end" token in the end of each list in the test cases
+	// reads integer tokens from the console and constructs a LinkedList from them
+	while (scan.hasNextInt()) {
+		double coeff = scan.nextInt();
+		int power = scan.nextInt();
+		if (poly1 == null) {
+			poly1 = createNode(coeff, power);
+			current = poly1;
+		} 
+		else {
+			current.next = createNode(coeff, power);;
+			current = current.next;
+		}
+	}
+	scan.next(); // gets rid of the "end" token in the end of each list in the test cases
     
-    current = null;
-    while (scan.hasNextInt()) {
-      double coeff = scan.nextInt();
-      int power = scan.nextInt();
-      if (poly2 == null) {
-         poly2 = createNode(coeff, power);
-         current = poly2;
-      } else {
-        current.next = createNode(coeff, power);;
-        current = current.next;
-      }
-    }
-    scan.next(); // gets rid of the "end" token in the end of each list in the test cases
+	current = null;
+	while (scan.hasNextInt()) 
+	{
+		double coeff = scan.nextInt();
+		int power = scan.nextInt();
+		if (poly2 == null)
+		{
+			poly2 = createNode(coeff, power);
+			current = poly2;
+		} 
+		else 
+		{
+			current.next = createNode(coeff, power);;
+			current = current.next;
+		}
+    	}
+	scan.next(); // gets rid of the "end" token in the end of each list in the test cases
 
-    HW2.printList(HW2.multiply(poly1, poly2));
-    HW2.printList(HW2.add(poly1, poly2));
+	HW2.printList(HW2.multiply(poly1, poly2));
+	HW2.printList(HW2.add(poly1, poly2));
 		
-		
-		scan.close();
+	scan.close();
 	}
 }
