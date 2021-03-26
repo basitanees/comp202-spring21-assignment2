@@ -28,14 +28,14 @@ class HW2
 	// Create a node and return
 	static Node createNode(double coeff, int power)
 	{
-		// Your code here
+	// Your code here
 		
 	}
   
-   // Function add a new node
+  	// Function add a new node
 	static Node addnode(Node head, double coeff, int power)
 	{
-	    // Your code here
+	// Your code here
 	 
 	}
   
