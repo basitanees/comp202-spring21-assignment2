@@ -1,9 +1,12 @@
 import java.util.Scanner;
 
-public class HW2_test {
+public class HW2_Test {
 	  
 public static void main(String[] args) {
 	Scanner scan = new Scanner(System.in);
+	
+	double coeff;
+	int power;
 
 	HW2.Node poly1 = null;
 	HW2.Node poly2 = null;
@@ -11,8 +14,8 @@ public static void main(String[] args) {
 
 	// reads integer tokens from the console and constructs a LinkedList from them
 	while (scan.hasNextDouble()) {
-		double coeff = scan.nextDouble();
-		int power = scan.nextInt();
+		coeff = scan.nextDouble();
+		power = scan.nextInt();
 		if (poly1 == null) {
 			poly1 = HW2.createNode(coeff, power);
 			current = poly1;
@@ -27,8 +30,8 @@ public static void main(String[] args) {
 	current = null;
 	while (scan.hasNextDouble()) 
 	{
-		double coeff = scan.nextDouble();
-		int power = scan.nextInt();
+		coeff = scan.nextDouble();
+		power = scan.nextInt();
 		if (poly2 == null)
 		{
 			poly2 = HW2.createNode(coeff, power);
@@ -42,7 +45,7 @@ public static void main(String[] args) {
 	}
 	scan.next(); // gets rid of the "end" token in the end of each list in the test cases
 
-	HW2.printList(HW2.add(poly1, poly2));
+	HW2.printList(HW2.addPoly(poly1, poly2));
 	HW2.printList(HW2.multiply(poly1, poly2));
 
 	scan.close();
