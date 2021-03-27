@@ -45,7 +45,7 @@ public static void main(String[] args) {
 	}
 	scan.next(); // gets rid of the "end" token in the end of each list in the test cases
 
-	HW2.printList(HW2.addPoly(poly1, poly2));
+	HW2.printList(HW2.add(poly1, poly2));
 	HW2.printList(HW2.multiply(poly1, poly2));
 
 	scan.close();
