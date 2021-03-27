@@ -10,8 +10,8 @@ public static void main(String[] args) {
 	HW2.Node current = null;
 
 	// reads integer tokens from the console and constructs a LinkedList from them
-	while (scan.hasNextInt()) {
-		double coeff = scan.nextInt();
+	while (scan.hasNextDouble()) {
+		double coeff = scan.nextDouble();
 		int power = scan.nextInt();
 		if (poly1 == null) {
 			poly1 = HW2.createNode(coeff, power);
@@ -25,9 +25,9 @@ public static void main(String[] args) {
 	scan.next(); // gets rid of the "end" token in the end of each list in the test cases
     
 	current = null;
-	while (scan.hasNextInt()) 
+	while (scan.hasNextDouble()) 
 	{
-		double coeff = scan.nextInt();
+		double coeff = scan.nextDouble();
 		int power = scan.nextInt();
 		if (poly2 == null)
 		{
